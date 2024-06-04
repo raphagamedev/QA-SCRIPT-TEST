@@ -1,8 +1,8 @@
-describe('logando no illi', () => {
+describe('logando no sistemaERP', () => {
     it('passes', () => {
       cy.visit('http://xxxxxxxxxxxxxxxxxxxx.com.br')
 
-      // ---------------------------------------------
+            // ---------------------------------------------
       //#############################################
       //            LOGIN DE USUÁRIO
        
@@ -38,7 +38,19 @@ describe('logando no illi', () => {
 
       //            INCLUIR MARCA
   
-     
+      cy.wait(5000);
+
+      //clica no botão "incluir"
+      cy.get('#button-1732-btnWrap').click();
+
+      //adiciona o nome desejado no campo 
+      cy.get('#textfield-1757-inputEl').type('adiciona_marca2');
+
+      //salva o processo
+      cy.get('#button-1760-btnIconEl').click();
+
+      //fim do processo de incluir uma marca
+
   
     })
   })
