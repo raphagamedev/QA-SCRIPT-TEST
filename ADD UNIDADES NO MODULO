@@ -1,0 +1,305 @@
+it('passes', () => {
+
+  cy.visit('xxxxxxxxxxxx')
+
+
+
+  // ---------------------------------------------
+
+  //#############################################
+
+  //      LOGIN DE USUÁRIO
+
+
+
+
+
+  // Preenchendo o campo de login
+
+  cy.get('[name="login"]').type('raphael');
+
+
+
+  // Executando JavaScript para definir o valor do campo de senha
+
+  cy.get('[name="senha"]').then(($input) => {
+
+   $input.val('i123').trigger('change');
+
+  });
+
+
+
+  cy.wait(1000);
+
+
+
+  // Clicando no botão de entrada forçando o clique mesmo que o botão esteja desativado
+
+  cy.contains('button', 'Entrar').click({force: true});
+
+  // Clicar no botão de entrada novamente
+
+  cy.contains('button', 'Entrar').click();
+
+
+
+
+
+  // ---------------------------------------------
+
+  //#############################################
+
+  //      MODULO PRODUTO
+
+
+
+  cy.wait(10000);
+
+
+
+  cy.get('#button-1608-btnWrap').click({force: true});
+
+
+
+  // ---------------------------------------------
+
+  //#############################################
+
+  //      MODULO UNIDADE
+
+
+
+  cy.wait(5000);
+
+
+
+  cy.get('#button-1611-btnInnerEl').click({force: true});
+
+
+
+  // ---------------------------------------------
+
+  //      INCLUIR UNIDADE
+
+
+
+  cy.wait(5000);
+
+  // ---------------------------------------------
+
+  //clica no botão "incluir"
+
+  cy.get('#button-1736-btnInnerEl').click();
+
+
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Código"
+
+  cy.get('#textfield-1793-inputEl').type('cycod');
+
+
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Nome"
+
+  cy.get('#textfield-1794-inputEl').type('adiciona_unidade_cypress');
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Decimais"
+
+  cy.get('#numberfield-1795-inputEl').type('1');
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Tipo"
+
+  cy.get('#abstractcombo-1796-inputEl').type('UNITARIO');
+
+  cy.wait(5000);
+
+
+
+
+
+  //---------------------------------------------
+
+  //salva o processo
+
+  cy.get('#button-1800-btnIconEl').click({force: true});
+
+
+
+  //fim do processo de incluir uma marca
+
+
+
+
+
+ })
+
+}) it('passes', () => {
+
+  cy.visit('xxxxxxxxxxxx')
+
+
+
+  // ---------------------------------------------
+
+  //#############################################
+
+  //      LOGIN DE USUÁRIO
+
+
+
+
+
+  // Preenchendo o campo de login
+
+  cy.get('[name="login"]').type('raphael');
+
+
+
+  // Executando JavaScript para definir o valor do campo de senha
+
+  cy.get('[name="senha"]').then(($input) => {
+
+   $input.val('i123').trigger('change');
+
+  });
+
+
+
+  cy.wait(1000);
+
+
+
+  // Clicando no botão de entrada forçando o clique mesmo que o botão esteja desativado
+
+  cy.contains('button', 'Entrar').click({force: true});
+
+  // Clicar no botão de entrada novamente
+
+  cy.contains('button', 'Entrar').click();
+
+
+
+
+
+  // ---------------------------------------------
+
+  //#############################################
+
+  //      MODULO PRODUTO
+
+
+
+  cy.wait(10000);
+
+
+
+  cy.get('#button-1608-btnWrap').click({force: true});
+
+
+
+  // ---------------------------------------------
+
+  //#############################################
+
+  //      MODULO UNIDADE
+
+
+
+  cy.wait(5000);
+
+
+
+  cy.get('#button-1611-btnInnerEl').click({force: true});
+
+
+
+  // ---------------------------------------------
+
+  //      INCLUIR UNIDADE
+
+
+
+  cy.wait(5000);
+
+  // ---------------------------------------------
+
+  //clica no botão "incluir"
+
+  cy.get('#button-1736-btnInnerEl').click();
+
+
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Código"
+
+  cy.get('#textfield-1793-inputEl').type('cycod');
+
+
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Nome"
+
+  cy.get('#textfield-1794-inputEl').type('adiciona_unidade_cypress');
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Decimais"
+
+  cy.get('#numberfield-1795-inputEl').type('1');
+
+
+
+  // ---------------------------------------------
+
+  //adiciona o nome desejado no campo "Tipo"
+
+  cy.get('#abstractcombo-1796-inputEl').type('UNITARIO');
+
+  cy.wait(5000);
+
+
+
+
+
+  //---------------------------------------------
+
+  //salva o processo
+
+  cy.get('#button-1800-btnIconEl').click({force: true});
+
+
+
+  //fim do processo de incluir uma marca
+
+
+
+
+
+ })
+
+}) 
