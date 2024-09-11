@@ -1,6 +1,6 @@
 describe('logando no illi', () => {
   it('passes', () => {
-    cy.visit('http://hmg-premium.central.illimitar.com.br')
+    cy.visit('http://end-point')
 
     // ---------------------------------------------
     //#############################################
